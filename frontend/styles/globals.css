@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-display: 'Playfair Display';
+  --font-body: 'DM Sans';
+  --brand-dark: #0A0A0A;
+  --brand-bg: #121316;
+  --brand-deep: #000000;
+  --brand-accent: #C7CBD1;
+  --brand-mint: #F3F4F5;
+  --brand-text: #0A0A0A;
+  --brand-muted: #5B5F66;
+  --brand-border: #E3E4E7;
+  --brand-silver: #AFB4BB;
+  --brand-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), 'DM Sans', system-ui, sans-serif;
+  color: var(--brand-text);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display), 'Playfair Display', Georgia, serif;
+}
+
+h1, h2, h3, .heading {
+  font-family: var(--font-display), 'Playfair Display', Georgia, serif;
+  color: var(--brand-text);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--brand-mint); }
+::-webkit-scrollbar-thumb { background: var(--brand-dark); border-radius: 3px; }
+
+/* ─── Components ─────────────────────────────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:bg-brand-accent hover:text-brand-dark hover:shadow-card-hover hover:-translate-y-0.5 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-brand-dark text-brand-dark font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:bg-brand-dark hover:text-white active:scale-95;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-brand-dark font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:bg-brand-mint active:scale-95 shadow-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-brand-border/50 overflow-hidden transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-bold text-brand-text leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-brand-muted text-base md:text-lg leading-relaxed max-w-2xl;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide;
+  }
+
+  .badge-new-launch { @apply bg-black text-white border border-black; }
+  .badge-ready { @apply bg-white text-black border border-black; }
+  .badge-pre-launch { @apply bg-brand-silver-light text-black border border-brand-silver-dark/40; }
+  .badge-under-construction { @apply bg-brand-silver-dark text-brand-dark border border-brand-silver-dark; }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-brand-border rounded-xl text-brand-text placeholder:text-brand-muted focus:outline-none focus:ring-2 focus:ring-brand-dark focus:border-transparent transition-all duration-200 bg-white text-sm;
+  }
+
+  .select-field {
+    @apply w-full px-4 py-3 border border-brand-border rounded-xl text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-dark focus:border-transparent bg-white text-sm appearance-none cursor-pointer;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #000000 0%, #17181b 45%, #2b2e33 100%);
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(circle, rgba(175,180,187,0.18) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .topbar-gradient {
+    background: linear-gradient(90deg, #000000 0%, #1a1b1e 100%);
+  }
+
+  .sticky-cta {
+    @apply fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-brand-border shadow-lg;
+  }
+}
+
+/* ─── Animations ─────────────────────────────────────────────────── */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Hero ───────────────────────────────────────────────────────── */
+.hero-text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #cfd2d7 55%, #8f949c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Project Card ───────────────────────────────────────────────── */
+.project-card-image {
+  @apply relative overflow-hidden;
+}
+.project-card-image img {
+  transition: transform 0.5s ease;
+}
+.card:hover .project-card-image img {
+  transform: scale(1.06);
+}
+
+/* ─── Modal ──────────────────────────────────────────────────────── */
+.modal-overlay {
+  @apply fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4;
+}
+.modal-box {
+  @apply bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden;
+}
+
+/* ─── OTP Input ──────────────────────────────────────────────────── */
+.otp-input {
+  @apply w-12 h-14 text-center text-2xl font-bold border-2 border-brand-border rounded-xl focus:border-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-dark/20 transition-all;
+}
+
+/* ─── CRM Table ──────────────────────────────────────────────────── */
+.crm-table th {
+  @apply bg-brand-mint text-brand-dark text-xs font-semibold uppercase tracking-wide px-4 py-3 text-left;
+}
+.crm-table td {
+  @apply px-4 py-3 text-sm border-b border-brand-border/50;
+}
+.crm-table tr:hover td {
+  @apply bg-brand-mint/50;
+}
+
+/* ─── Score Badges ────────────────────────────────────────────────── */
+.score-cold { @apply bg-blue-50 text-blue-700 border border-blue-200; }
+.score-warm { @apply bg-amber-50 text-amber-700 border border-amber-200; }
+.score-hot { @apply bg-red-50 text-red-700 border border-red-200; }
+.score-priority { @apply bg-purple-50 text-purple-700 border border-purple-200; }
+.score-booked { @apply bg-green-50 text-green-700 border border-green-200; }
+.score-lost { @apply bg-gray-100 text-gray-500 border border-gray-200; }
