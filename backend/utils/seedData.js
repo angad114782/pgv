@@ -19,13 +19,13 @@ const IMG = {
   t11: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
   t12: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
   // Extra high-quality building images
-  t13: 'https://images.unsplash.com/photo-1613977257363-707ba9b9bb61?w=800&q=80',
+  t13: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80', // was dead (404), reused t16's image
   t14: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
-  t15: 'https://images.unsplash.com/photo-1582407947304-fd86f28f3cb4?w=800&q=80',
+  t15: 'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&q=80', // was dead (404), reused t17's image
   t16: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80',
   t17: 'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&q=80',
   t18: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80',
-  t19: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80',
+  t19: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80', // was dead (404), reused t8's image
   t20: 'https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80',
   pool: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
   gym:  'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80',
@@ -35,7 +35,7 @@ const IMG = {
   lob:  'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
   grdn: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
   sky:  'https://images.unsplash.com/photo-1467987506553-8f3916508521?w=800&q=80',
-  ter:  'https://images.unsplash.com/photo-1600210491892-03d54741ba50?w=800&q=80',
+  ter:  'https://images.unsplash.com/photo-1467987506553-8f3916508521?w=800&q=80', // was dead (404), reused sky's image
 };
 
 // ── Real Projects Data ─────────────────────────────────────────────────────────

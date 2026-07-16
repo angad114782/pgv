@@ -194,9 +194,9 @@ const SiteSettingsSchema = new mongoose.Schema({
       { name: 'Golf Course Road',            slug: 'golf-course-road',            href: '/golf-course-road-projects',            icon: '⛳', city: 'Gurgaon' },
       { name: 'Golf Course Extension Road',  slug: 'golf-course-extension-road',  href: '/golf-course-extension-road-projects',  icon: '🏌️', city: 'Gurgaon' },
       { name: 'SPR Road',                    slug: 'spr-road',                    href: '/spr-road-projects',                    icon: '🛣️', city: 'Gurgaon' },
-      { name: 'Sohna Road',                  slug: 'sohna-road',                  href: '/sohna-road-projects',                  icon: '🌳', city: 'Gurgaon' },
+      { name: 'Sohna Road',                  slug: 'sohna-road',                  href: '/corridor/sohna-road',                  icon: '🌳', city: 'Gurgaon' },
       { name: 'New Gurgaon',                 slug: 'new-gurgaon',                 href: '/new-gurgaon-projects',                 icon: '🌿', city: 'Gurgaon' },
-      { name: 'MG Road',                     slug: 'mg-road',                     href: '/mg-road-projects',                     icon: '🏙️', city: 'Gurgaon' },
+      { name: 'MG Road',                     slug: 'mg-road',                     href: '/corridor/mg-road',                     icon: '🏙️', city: 'Gurgaon' },
     ],
   },
 
